@@ -9,7 +9,7 @@ UnsupervisedLearning
  - Find the groups of similar observations
    - Step_01: randomly generate the centroids (MU1, MU2,...).
    - Step_02: Allocation
-     - Holding `MU_k` fixed, label each data points (which MU_k is closest?) and create clusters around each MU_k (find the membership 'Z_ik') that **minimize SS**.
+     - Holding `MU_k` fixed, label each data points (which MU_k is closest?) and find the membership 'Z_ik' that **minimize SS** (create clusters around each MU_k).
    - Step_03: Updating
      - Holding `Z_ik` fixed, elect 'new MU_k' for each cluster that **minimize SS**.
    - Step_04: Iterate until they converge (no movement of points b/w clusters)
