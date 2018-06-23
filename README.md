@@ -7,11 +7,11 @@ UnsupervisedLearning
 
 ### 1. K-mean Clustering
  - Find the groups of similar observations
-   - Step_01: randomly generate the centroids (k, k,...).
+   - Step_01: randomly generate the centroids (MU1, MU2,...).
    - Step_02: Allocation
-     - Holding 'k' fixed, label each data points (which k is closest?) and create clusters around each k (find the membership 'Z_ik') that **minimize SS**.
+     - Holding `MU_k` fixed, label each data points (which MU_k is closest?) and create clusters around each MU_k (find the membership 'Z_ik') that **minimize SS**.
    - Step_03: Updating
-     - Holding 'Z_ik' fixed, elect 'new k' for each cluster that **minimize SS**.
+     - Holding `Z_ik` fixed, elect 'new MU_k' for each cluster that **minimize SS**.
    - Step_04: Iterate until they converge (no movement of points b/w clusters)
 > **SS** of each cluster..(find the membership `Z_ik` that minimize the SS)
 
