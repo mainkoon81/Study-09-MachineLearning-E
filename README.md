@@ -21,6 +21,9 @@ UnsupervisedLearning
 
 ![sec](http://www.sciweavers.org/upload/Tex2Img_1529755147/render.png)
 
+> Limitation(Local Minima): It's a local hill climbing algorithm. The output for any fixed training set can be inconsistent...Damn. The output would be very dependent on where we put our **initial cluster centers**. 
+<img src="https://user-images.githubusercontent.com/31917400/41810278-e6b5e196-76f3-11e8-9fa0-1d0cb04a6975.jpg" />
+
 
 
 
