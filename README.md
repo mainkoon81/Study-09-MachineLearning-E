@@ -17,7 +17,7 @@ UnsupervisedLearning
 
 ![first](http://www.sciweavers.org/upload/Tex2Img_1529748773/render.png)
 
-> **SS** for each data pt..(find the `k` that minimize the SS)
+> **SS** for each data pt..(find the `MU_k` that minimize the SS)
 
 ![sec](http://www.sciweavers.org/upload/Tex2Img_1529755147/render.png)
 
