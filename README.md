@@ -15,7 +15,7 @@ UnsupervisedLearning
    - Step_04: Iterate until they converge (no movement of points b/w clusters)
 > **SS** of each cluster..(find the membership `Z_ik` that minimize the SS)
 
-![first](http://www.sciweavers.org/upload/Tex2Img_1529748773/render.png)
+![first](http://www.sciweavers.org/upload/Tex2Img_1529748773/render.png) `Z_ik = 0/1`
 
 > **SS** for each data pt..(find the `MU_k` that minimize the SS)
 
