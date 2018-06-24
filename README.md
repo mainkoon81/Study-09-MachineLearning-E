@@ -28,25 +28,26 @@ UnsupervisedLearning
 
  - **Hyper-spherical nature**: it only relies on distance to centroid as a definition of a cluster, thus it cannot carve out descent clusters when their shapes are not spherical.   
 
-### 2. Hierarchical & Density-based Clustering
+### 2. Hierarchical & Density-Based Clustering
  - In SKLEARN, they are parts of 'agglomerative clustering' component.  
- - Hierarchical Clustering results in a **structure of clusters** that gives us a visual indication of how clusters relate to each other. 
- - DBSCAN(Density-based Spatial Clustering of Applications with Noise) clusters the pt densely packed together and labels other pt as noise. 
 <img src="https://user-images.githubusercontent.com/31917400/41822691-a7ced232-77eb-11e8-946f-40b479b843be.jpg" />
 
 > Hierarchical Clustering Example: A Pizza company want to cluster the locations of its customers in order to determine where it should open up its new branches.
 
 1. Hierarchical Single-link clustering: 
+ - Hierarchical Clustering results in a **structure of clusters** that gives us a visual indication of how clusters relate to each other. 
  - Step01: assume each pt is already a cluster and we give each pt a label. 
  - Step02: calculate the distance b/w each pt and each other pt, then choose the smallest distances to group them into a cluster. On the side, we draw the structure tree one by one (the dendogram gives us an additional insight that might direct the results of the clustering misses) 
 <img src="https://user-images.githubusercontent.com/31917400/41822846-fb1a5374-77ed-11e8-8f71-50aad55778a5.jpg" />
 
 2. Hierarchical Average-link clustering:
-
 ```
+
 
 ```
 3. Density-Based Clustering:
+ - DBSCAN(Density-based Spatial Clustering of Applications with Noise) clusters the pt densely packed together and labels other pt as noise. 
+ - 
 
 
 
