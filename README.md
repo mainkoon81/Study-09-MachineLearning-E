@@ -35,10 +35,20 @@ UnsupervisedLearning
 <img src="https://user-images.githubusercontent.com/31917400/41822691-a7ced232-77eb-11e8-946f-40b479b843be.jpg" />
 
 > Hierarchical Clustering Example: A Pizza company want to cluster the locations of its customers in order to determine where it should open up its new branches.
- - Single-link clustering: 
-   - Step01. assume each pt is already a cluster and we give each pt a label. 
-   - Step02. calculate the distance b/w each pt and each other pt, then choose the smallest distances to group them into a cluster. On the side, we draw the structure tree one by one (the dendogram gives us an additional insight that might direct the results of the clustering misses) 
+
+1. Hierarchical Single-link clustering: 
+ - Step01: assume each pt is already a cluster and we give each pt a label. 
+ - Step02: calculate the distance b/w each pt and each other pt, then choose the smallest distances to group them into a cluster. On the side, we draw the structure tree one by one (the dendogram gives us an additional insight that might direct the results of the clustering misses) 
 <img src="https://user-images.githubusercontent.com/31917400/41822846-fb1a5374-77ed-11e8-8f71-50aad55778a5.jpg" />
+
+2. Hierarchical Average-link clustering:
+
+```
+
+```
+3. Density-Based Clustering:
+
+
 
 
 
