@@ -29,15 +29,15 @@ UnsupervisedLearning
 <img src="https://user-images.githubusercontent.com/31917400/41810519-d272fca6-76f7-11e8-97a0-abdef5c8d8ba.jpg" />
 
 ### 2. Hierarchical & Density-based Clustering
+ - In SKLEARN, they are parts of 'agglomerative clustering' component.  
  - Hierarchical Clustering results in a **structure of clusters** that gives us a visual indication of how clusters relate to each other. 
  - DBSCAN(Density-based Spatial Clustering of Applications with Noise) clusters the pt densely packed together and labels other pt as noise. 
 <img src="https://user-images.githubusercontent.com/31917400/41822691-a7ced232-77eb-11e8-946f-40b479b843be.jpg" />
 
-> Hierarchical Clustering Example: 
- - 1. Single link clustering: 
-   - A Pizza company want to cluster the locations of its customers in order to determine where it should open up its new branches.
+> Hierarchical Clustering Example: A Pizza company want to cluster the locations of its customers in order to determine where it should open up its new branches.
+ - Single-link clustering: 
    - Step01. assume each pt is already a cluster and we give each pt a label. 
-   - Step02. calculate the distance b/w each pt and each other pt, then choose the smallest distances to group them into a cluster. On the side, we draw the structure tree one by one. 
+   - Step02. calculate the distance b/w each pt and each other pt, then choose the smallest distances to group them into a cluster. On the side, we draw the structure tree one by one (the dendogram gives us an additional insight that might direct the results of the clustering misses) 
 <img src="https://user-images.githubusercontent.com/31917400/41822846-fb1a5374-77ed-11e8-8f71-50aad55778a5.jpg" />
 
 
