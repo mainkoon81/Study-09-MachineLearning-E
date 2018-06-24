@@ -2,7 +2,7 @@
 UnsupervisedLearning
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-## Clustering
+## A. Clustering
 <img src="https://user-images.githubusercontent.com/31917400/41802151-ac0d97dc-7676-11e8-8c9f-30623f45fbbe.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/41823116-0c410914-77f2-11e8-8d2f-52bbbffcec4e.jpg" />
 
@@ -28,6 +28,8 @@ UnsupervisedLearning
 
  - **Hyper-spherical nature**: it only relies on distance to centroid as a definition of a cluster, thus it cannot carve out descent clusters when their shapes are not spherical.
 ```
+
+
 
 ```
 ### 2. Hierarchical & Density-Based Clustering
@@ -108,10 +110,15 @@ plt.show()
 <img src="https://user-images.githubusercontent.com/31917400/41823873-f9733a66-77fe-11e8-843f-0e1375f6092c.jpg" />
 
 ```
+
+
+
 ```
 <img src="https://user-images.githubusercontent.com/31917400/41823968-5ac06194-7800-11e8-8b24-119cfed4d27f.jpg" />
 
+## B. Gaussian Mixture Model
 
+### 1. 
 
 
 
