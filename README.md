@@ -26,8 +26,10 @@ UnsupervisedLearning
  - **Local Minima**: It's a local hill climbing algorithm. It can give a sub-optimal solution. The output for any fixed training set can be inconsistent...Damn. The output would be very dependent on where we put our **initial cluster centers**. The more cluster centers we have, the more bad local minima we can get, so run the algorithm multiple times.
 <img src="https://user-images.githubusercontent.com/31917400/41810278-e6b5e196-76f3-11e8-9fa0-1d0cb04a6975.jpg" />
 
- - **Hyper-spherical nature**: it only relies on distance to centroid as a definition of a cluster, thus it cannot carve out descent clusters when their shapes are not spherical.   
+ - **Hyper-spherical nature**: it only relies on distance to centroid as a definition of a cluster, thus it cannot carve out descent clusters when their shapes are not spherical.
+```
 
+```
 ### 2. Hierarchical & Density-Based Clustering
  - In SKLEARN, they are parts of `agglomerative clustering` component.  
 <img src="https://user-images.githubusercontent.com/31917400/41822691-a7ced232-77eb-11e8-946f-40b479b843be.jpg" />
@@ -40,12 +42,60 @@ UnsupervisedLearning
  - Step02: calculate the distance b/w each pt and each other pt, then choose the smallest distances to group them into a cluster. On the side, we draw the structure tree one by one (the dendogram gives us an additional insight that might direct the results of the clustering misses) 
 <img src="https://user-images.githubusercontent.com/31917400/41822846-fb1a5374-77ed-11e8-8f71-50aad55778a5.jpg" />
 
-2. Hierarchical Average-link clustering:
+2. Hierarchical Complete-link clustering:....
+3. Hierarchical Average-link clustering:....
 ```
+from sklearn.cluster import AgglomerativeClustering
 
+# Ward is the default linkage algorithm...
+ward = AgglomerativeClustering(n_clusters=3)
+ward_pred = ward.fit_predict(df)
 
+# using complete linkage
+complete = AgglomerativeClustering(n_clusters=3, linkage="complete")
+# Fit & predict
+complete_pred = complete.fit_predict(df)
+
+# using average linkage
+avg = AgglomerativeClustering(n_clusters=3, linkage="average")
+# Fit & predict
+avg_pred = avg.fit_predict(df)
 ```
-3. Density-Based Clustering:
+To determine which clustering result better matches the original labels of the samples, we can use adjusted_rand_score which is an external cluster validation index which results in a score between -1 and 1, where 1 means two clusterings are identical of how they grouped the samples in a dataset (regardless of what label is assigned to each cluster). Which algorithm results in the higher Adjusted Rand Score?
+```
+from sklearn.metrics import adjusted_rand_score
+
+ward_ar_score = adjusted_rand_score(df.label, ward_pred)
+complete_ar_score = adjusted_rand_score(df.label, complete_pred)
+avg_ar_score = adjusted_rand_score(df.label, avg_pred)
+
+print( "Scores: \nWard:", ward_ar_score,"\nComplete: ", complete_ar_score, "\nAverage: ", avg_ar_score)
+```
+Sometimes some column has smaller values than the rest of the columns, and so its variance counts for less in the clustering process (since clustering is based on distance). We normalize the dataset so that each dimension lies between 0 and 1, so they have equal weight in the clustering process. **This is done by subtracting the minimum from each column then dividing the difference by the range.** Would clustering the dataset after this transformation lead to a better clustering?
+```
+from sklearn import preprocessing
+normalized_X = preprocessing.normalize(df)
+```
+To visualize the highest scoring clustering result, we'll need to use Scipy's linkage function to perform the clusteirng again so we can obtain the linkage matrix it will later use to visualize the hierarchy.
+```
+# Import scipy's linkage function to conduct the clustering
+from scipy.cluster.hierarchy import linkage
+
+# Pick the one that resulted in the highest Adjusted Rand Score
+linkage_type = 'ward'
+
+linkage_matrix = linkage(normalized_X, linkage_type)
+
+from scipy.cluster.hierarchy import dendrogram
+
+plt.figure(figsize=(22,18))
+dendrogram(linkage_matrix)
+
+plt.show()
+```
+<img src="https://user-images.githubusercontent.com/31917400/41823713-c7335eca-77fc-11e8-9a72-bc83292eb7b2.jpg" />
+
+4. Density-Based Clustering:
  - DBSCAN(Density-based Spatial Clustering of Applications with Noise) clusters the pt densely packed together and labels other pt as noise. 
  - 
 
