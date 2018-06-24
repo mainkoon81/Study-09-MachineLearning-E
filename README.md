@@ -42,8 +42,13 @@ UnsupervisedLearning
  - Step02: calculate the distance b/w each pt and each other pt, then choose the smallest distances to group them into a cluster. On the side, we draw the structure tree one by one (the dendogram gives us an additional insight that might direct the results of the clustering misses) 
 <img src="https://user-images.githubusercontent.com/31917400/41822846-fb1a5374-77ed-11e8-8f71-50aad55778a5.jpg" />
 
+ - Single linkage looks at the closest point to the cluster, that can result in clusters of various shapes, thus is more prone to result in elongated shapes that are not necessarily compact or circular. 
+ - Single and complete linkage follow merging heuristics that involve mainly one point. They do not pay much attention to in-cluster variance.
+ - Ward's method does try to minimize the variance resulting in each merging step by merging clusters that lead to the least increase in variance in the clusters after merging. 
+
 2. Hierarchical Complete-link clustering:....
 3. Hierarchical Average-link clustering:....
+4. Ward's Method:....
 ```
 from sklearn.cluster import AgglomerativeClustering
 
@@ -95,10 +100,15 @@ plt.show()
 ```
 <img src="https://user-images.githubusercontent.com/31917400/41823713-c7335eca-77fc-11e8-9a72-bc83292eb7b2.jpg" />
 
-4. Density-Based Clustering:
- - DBSCAN(Density-based Spatial Clustering of Applications with Noise) clusters the pt densely packed together and labels other pt as noise. 
- - 
+5. Density-Based Clustering:
+ - DBSCAN(Density-based Spatial Clustering of Applications with Noise) grips the pt densely packed together and labels other pt as noise. 
+ - Step01: it selects a point arbitrarily, and looks at the neighbors around, and ask "Are there any other points?". If no, it's a noise. and ask "enough numbers to make a cluster?". If no, it's a noise. 
+ - Step02: If we find enough number of points, we identify 'core point' and 'border point'.
+ - Step03: Continue examine points..and create clusters. 
+<img src="https://user-images.githubusercontent.com/31917400/41823873-f9733a66-77fe-11e8-843f-0e1375f6092c.jpg" />
 
+```
+```
 
 
 
