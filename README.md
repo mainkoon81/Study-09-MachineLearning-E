@@ -29,7 +29,7 @@ UnsupervisedLearning
  - **Hyper-spherical nature**: it only relies on distance to centroid as a definition of a cluster, thus it cannot carve out descent clusters when their shapes are not spherical.   
 
 ### 2. Hierarchical & Density-Based Clustering
- - In SKLEARN, they are parts of 'agglomerative clustering' component.  
+ - In SKLEARN, they are parts of `agglomerative clustering` component.  
 <img src="https://user-images.githubusercontent.com/31917400/41822691-a7ced232-77eb-11e8-946f-40b479b843be.jpg" />
 
 > Hierarchical Clustering Example: A Pizza company want to cluster the locations of its customers in order to determine where it should open up its new branches.
