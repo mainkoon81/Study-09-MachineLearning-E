@@ -4,6 +4,7 @@ UnsupervisedLearning
 ----------------------------------------------------------------------------------------------------------------------------------------
 ## Clustering
 <img src="https://user-images.githubusercontent.com/31917400/41802151-ac0d97dc-7676-11e8-8c9f-30623f45fbbe.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/41823116-0c410914-77f2-11e8-8d2f-52bbbffcec4e.jpg" />
 
 ### 1. K-mean Clustering
  - Find the groups of similar observations
@@ -26,7 +27,6 @@ UnsupervisedLearning
 <img src="https://user-images.githubusercontent.com/31917400/41810278-e6b5e196-76f3-11e8-9fa0-1d0cb04a6975.jpg" />
 
  - **Hyper-spherical nature**: it only relies on distance to centroid as a definition of a cluster, thus it cannot carve out descent clusters when their shapes are not spherical.   
-<img src="https://user-images.githubusercontent.com/31917400/41810519-d272fca6-76f7-11e8-97a0-abdef5c8d8ba.jpg" />
 
 ### 2. Hierarchical & Density-based Clustering
  - In SKLEARN, they are parts of 'agglomerative clustering' component.  
