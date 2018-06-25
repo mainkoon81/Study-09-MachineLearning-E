@@ -116,6 +116,7 @@ plt.show()
 ```
 <img src="https://user-images.githubusercontent.com/31917400/41823968-5ac06194-7800-11e8-8b24-119cfed4d27f.jpg" />
 
+---
 ## B. Gaussian Mixture Model
 
 ### 1. 
