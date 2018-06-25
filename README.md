@@ -1,8 +1,8 @@
 # Study-09-MachineLearning-E
 UnsupervisedLearning
 
-----------------------------------------------------------------------------------------------------------------------------------------
-## A. Clustering
+---
+## A. Basic Clustering
 <img src="https://user-images.githubusercontent.com/31917400/41802151-ac0d97dc-7676-11e8-8c9f-30623f45fbbe.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/41823116-0c410914-77f2-11e8-8d2f-52bbbffcec4e.jpg" />
 
@@ -78,7 +78,7 @@ avg_ar_score = adjusted_rand_score(df.label, avg_pred)
 
 print( "Scores: \nWard:", ward_ar_score,"\nComplete: ", complete_ar_score, "\nAverage: ", avg_ar_score)
 ```
-Sometimes some column has smaller values than the rest of the columns, and so its variance counts for less in the clustering process (since clustering is based on distance). We normalize the dataset so that each dimension lies between 0 and 1, so they have equal weight in the clustering process. **This is done by subtracting the minimum from each column then dividing the difference by the range.** Would clustering the dataset after this transformation lead to a better clustering?
+Sometimes some column has smaller values than the rest of the columns, and so its variance counts for less in the clustering process (since clustering is based on distance). We normalize the dataset so that each dimension lies between 0 and 1, so they have equal weight in the clustering process. **This is done by subtracting the minimum from each column then dividing the difference(max-min) by the range.** Would clustering the dataset after this transformation lead to a better clustering?
 ```
 from sklearn import preprocessing
 normalized_X = preprocessing.normalize(df)
@@ -117,10 +117,13 @@ plt.show()
 <img src="https://user-images.githubusercontent.com/31917400/41823968-5ac06194-7800-11e8-8b24-119cfed4d27f.jpg" />
 
 ---
-## B. Gaussian Mixture Model
+## B. Model-Based Clustering(Gaussian Mixture)
+[Assumption]: **Each cluster follows a certain statistical distribution**.
+ - In one dimension
+<img src="https://user-images.githubusercontent.com/31917400/41854541-60d63b2a-7888-11e8-9389-628b0bb299e2.jpg" />
 
-### 1. 
-
+ - In two dimension
+ 
 
 
 
