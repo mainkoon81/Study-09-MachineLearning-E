@@ -118,6 +118,8 @@ plt.show()
 
 ---
 ## B. Model-Based Clustering(Gaussian Mixture)
+### Wow, several datasets were hacked and mixed up..How to retrieve the originals? 
+
 [Assumption]: **Each cluster follows a certain statistical distribution**.
  - In one dimension
 <img src="https://user-images.githubusercontent.com/31917400/41854541-60d63b2a-7888-11e8-9389-628b0bb299e2.jpg" />
@@ -129,12 +131,17 @@ plt.show()
 <img src="https://user-images.githubusercontent.com/31917400/41859683-988990f6-7894-11e8-9b42-dafa3ca365b8.jpg" />
 
  - Step_01. Initialization of the distributions
-   - > give `mean`, `var` for each of the two suspected clusters. 
-     - Run 'k-means' on the dataset and find the clusters.... or randomly choose ? 
+   - > give them the initial values(`mean`, `var`) for each of the two suspected clusters. 
+     - Run 'k-means' on the dataset and choose the clusters.... or randomly choose ? 
 <img src="https://user-images.githubusercontent.com/31917400/41859693-9f6987d2-7894-11e8-8721-e133859f2636.jpg" />
 
- - Step_02. 
-
+ - Step_02. **soft_clustering** of data-pt
+   - > let's say we have 'n'points. Each pt has 2 values for each feature. Now we need to calculate the membership(probability) of each pt.
+     - How to determine the membership? Just pass in your x_value, and two parameters(mean, var)...
+<img src="https://user-images.githubusercontent.com/31917400/41862976-52adfc1c-789d-11e8-9dd4-6d3776c71860.jpg" />
+     
+ - Step_03. Estimate real **parameters** of new Gaussians, using the result of the soft_clustering
+   - > For example, the `new mean` for Cluster_A, given the result of step_02, comes from calculating the weighted AVG of all of these points. 
 
 
 
