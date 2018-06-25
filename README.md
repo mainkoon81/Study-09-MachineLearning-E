@@ -123,7 +123,9 @@ plt.show()
 <img src="https://user-images.githubusercontent.com/31917400/41854541-60d63b2a-7888-11e8-9389-628b0bb299e2.jpg" />
 
  - In two dimension
- 
+<img src="https://user-images.githubusercontent.com/31917400/41857675-fa86a348-788f-11e8-8604-81c59a812d96.jpg" />
+
+ - EM Algorithm
 
 
 
