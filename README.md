@@ -125,8 +125,15 @@ plt.show()
  - In two dimension
 <img src="https://user-images.githubusercontent.com/31917400/41857675-fa86a348-788f-11e8-8604-81c59a812d96.jpg" />
 
- - EM Algorithm
+### EM(Expectation Maximization) Algorithm for Gaussian Mixture
+<img src="https://user-images.githubusercontent.com/31917400/41859683-988990f6-7894-11e8-9b42-dafa3ca365b8.jpg" />
 
+ - Step_01. Initialization of the distributions
+   - > give `mean`, `var` for each of the two suspected clusters. 
+     - Run 'k-means' on the dataset and find the clusters.... or randomly choose ? 
+<img src="https://user-images.githubusercontent.com/31917400/41859693-9f6987d2-7894-11e8-8721-e133859f2636.jpg" />
+
+ - Step_02. 
 
 
 
