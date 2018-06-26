@@ -169,10 +169,11 @@ http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf
 ### Cluster Validation
 <img src="https://user-images.githubusercontent.com/31917400/41922451-031eb4b4-795d-11e8-95b9-3c069d974b1a.jpg" />
 
-__1.External Indice:__
+__1.External Indices:__
 <img src="https://user-images.githubusercontent.com/31917400/41922576-5570dfee-795d-11e8-8834-2fb0cda805b1.jpg" />
 
-
+ - Adjusted Rand_Index [-1 to 1]: 
+<img src="https://user-images.githubusercontent.com/31917400/41922576-5570dfee-795d-11e8-8834-2fb0cda805b1.jpg" />
 
 
 
