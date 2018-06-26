@@ -183,16 +183,18 @@ http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf
 
  - When we don't have the ground truth.
  - **Silhouette Coefficient** [-1 to 1]:
-   - There is a Silhouette Coefficient for each data-pt. We average them and get a Silhouette score for the entire clustering. 
+   - There is a Silhouette Coefficient for each data-pt. We average them and get a Silhouette score for the entire clustering. We can calculate the silhouette coefficient for each point, cluster, as well as for an entire dataset. 
    - Silhouette is affected by `K`(No.of clusters) 
    - Silhouette is affected by compactness, circularity of the cluster.
-   - > Note: for DBSCAN, we never use Silhouette score...(it does not care the **compact, circular clustering** because of the idea of 'noise').
-   - > Note: for Hierachical Clustering, it carves out the data well, but it's not what Silhouette can conceive of. 
+   - > Note: for DBSCAN, we never use Silhouette score...(it does not care the **compact, circular clustering** because of the idea of 'noise'). Instead, we use **DBCV** for DBSCAN. http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=83C3BD5E078B1444CB26E243975507E1?doi=10.1.1.707.9034&rep=rep1&type=pdf
+   - > Note: for Hierachical Clustering, it carves out the clusters well, but it's not what Silhouette can conceive of.
+   
 By 'K'
 <img src="https://user-images.githubusercontent.com/31917400/41940187-d8c4b186-798f-11e8-9b02-1ff6fd5df88e.jpg" />
 
-By the 'shape' of the dataset
+By the 'shape' of the cluster
 <img src="https://user-images.githubusercontent.com/31917400/41940677-827502f2-7991-11e8-9a61-4a323e3d41e4.jpg" />
+
 
 
 
