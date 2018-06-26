@@ -132,7 +132,8 @@ plt.show()
 
  - Step_01. Initialization of the distributions
    - > give them the initial values(`mean`, `var`) for each of the two suspected clusters. 
-     - Run 'k-means' on the dataset and choose the clusters roughly.... or randomly choose ? 
+     - Run 'k-means' on the dataset and choose the clusters roughly.... or randomly choose ?
+     - It is indeed important that we are careful in **choosing the parameters of the initial Gaussians**. That has a significant effect on the quality of EM's result.
 <img src="https://user-images.githubusercontent.com/31917400/41859693-9f6987d2-7894-11e8-8721-e133859f2636.jpg" />
 
  - Step_02. **soft_clustering** of data-pt
@@ -150,8 +151,8 @@ plt.show()
    - > Evaluate the `log-likelihood` which sums for all clusters.
      - the higher the value, the more sure we are that the mixer model fits out dataset.
      - the purpose is to **maximize** this value by choosing the parameters(the mixing coefficient, mean, var) of each Gaussian again and again until the value converges, reaching a maximum. 
+     - What's the mixing coefficient??????
 <img src="https://user-images.githubusercontent.com/31917400/41907759-b96fe09a-7939-11e8-8cd6-957812adc8ce.jpg" />
-
 
 
 
