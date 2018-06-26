@@ -154,6 +154,15 @@ plt.show()
      - What's the mixing coefficient??????
 <img src="https://user-images.githubusercontent.com/31917400/41907759-b96fe09a-7939-11e8-8cd6-957812adc8ce.jpg" />
 
+```
+from sklearn import mixture
+gmm = mixture.GaussianMixture(n_components=3)
+gmm.fit(X)
+clustering = gmm.predict(X)
+```
+https://www.youtube.com/watch?v=lLt9H6RFO6A
+
+http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf
 
 
 
