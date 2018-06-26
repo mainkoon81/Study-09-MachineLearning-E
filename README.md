@@ -170,22 +170,24 @@ http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf
 ## C. Cluster Validation
 <img src="https://user-images.githubusercontent.com/31917400/41922451-031eb4b4-795d-11e8-95b9-3c069d974b1a.jpg" />
 
-__1.External Indices:__ 
+### 1.External Indices:__ 
 <img src="https://user-images.githubusercontent.com/31917400/41922576-5570dfee-795d-11e8-8834-2fb0cda805b1.jpg" />
 
  - When we have the ground truth(answer-sheet or the labeled reference).
  - **ARI**(Adjusted Rand_Index) [-1 to 1]: 
-   - ARI does not care what label we assign a cluster, as long as the point assignment matches that of the ground truth.
+   - > Note: ARI does not care what label we assign a cluster, as long as the point assignment matches that of the ground truth.
 <img src="https://user-images.githubusercontent.com/31917400/41938150-29f005e8-798a-11e8-8bac-85d9c0a0c0da.jpg" />
 
-__2. Internal Indices:__ 
+### 2. Internal Indices:__ 
 <img src="https://user-images.githubusercontent.com/31917400/41938728-c0276ab4-798b-11e8-86fd-f11e64f476df.jpg" />
 
  - When we don't have the ground truth.
  - **Silhouette Coefficient** [-1 to 1]:
    - There is a Silhouette Coefficient for each data-pt. We average them and get a Silhouette score for the entire clustering. 
    - Explore with different `K`(No.of clusters) 
+   - > Note: for DBSCAN, we never use Silhouette score...
 <img src="https://user-images.githubusercontent.com/31917400/41940187-d8c4b186-798f-11e8-9b02-1ff6fd5df88e.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/41940677-827502f2-7991-11e8-9a61-4a323e3d41e4.jpg" />
 
 
 
