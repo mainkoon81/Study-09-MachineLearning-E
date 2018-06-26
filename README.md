@@ -166,7 +166,8 @@ http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf
 
 <img src="https://user-images.githubusercontent.com/31917400/41909439-ea76ac5a-793e-11e8-80f8-b17a41882b8e.jpg" />
 
-### Cluster Validation
+---
+## C. Cluster Validation
 <img src="https://user-images.githubusercontent.com/31917400/41922451-031eb4b4-795d-11e8-95b9-3c069d974b1a.jpg" />
 
 __1.External Indices:__
