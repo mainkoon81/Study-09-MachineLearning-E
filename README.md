@@ -195,7 +195,10 @@ By 'K'
 By the 'shape' of the cluster
 <img src="https://user-images.githubusercontent.com/31917400/41940677-827502f2-7991-11e8-9a61-4a323e3d41e4.jpg" />
 
+```
 
+
+```
 
 
 
