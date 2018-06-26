@@ -185,8 +185,13 @@ http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf
  - **Silhouette Coefficient** [-1 to 1]:
    - There is a Silhouette Coefficient for each data-pt. We average them and get a Silhouette score for the entire clustering. 
    - Explore with different `K`(No.of clusters) 
-   - > Note: for DBSCAN, we never use Silhouette score...
+   - Silhouette cares compactness, circularity...
+   - > Note: for DBSCAN, we never use Silhouette score...(it does not care the **compact, circular clustering** because of the idea of 'noise').
+By 'K'
+   - > Note: for Hierachical Clustering with single linkage, it carves out the data well, but it's not what Silhouette can conceive of. 
 <img src="https://user-images.githubusercontent.com/31917400/41940187-d8c4b186-798f-11e8-9b02-1ff6fd5df88e.jpg" />
+
+By the 'shape' of the dataset
 <img src="https://user-images.githubusercontent.com/31917400/41940677-827502f2-7991-11e8-9a61-4a323e3d41e4.jpg" />
 
 
