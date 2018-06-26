@@ -164,6 +164,7 @@ https://www.youtube.com/watch?v=lLt9H6RFO6A
 
 http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf
 
+<img src="https://user-images.githubusercontent.com/31917400/41909439-ea76ac5a-793e-11e8-80f8-b17a41882b8e.jpg" />
 
 
 
