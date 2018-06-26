@@ -198,7 +198,10 @@ By the 'shape' of the cluster
 ```
 
 
+
 ```
+---
+## D. Feature Scaling
 
 
 
