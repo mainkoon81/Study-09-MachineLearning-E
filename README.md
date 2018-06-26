@@ -132,7 +132,7 @@ plt.show()
 
  - Step_01. Initialization of the distributions
    - > give them the initial values(`mean`, `var`) for each of the two suspected clusters. 
-     - Run 'k-means' on the dataset and choose the clusters.... or randomly choose ? 
+     - Run 'k-means' on the dataset and choose the clusters roughly.... or randomly choose ? 
 <img src="https://user-images.githubusercontent.com/31917400/41859693-9f6987d2-7894-11e8-8721-e133859f2636.jpg" />
 
  - Step_02. **soft_clustering** of data-pt
@@ -141,8 +141,16 @@ plt.show()
 <img src="https://user-images.githubusercontent.com/31917400/41862976-52adfc1c-789d-11e8-9dd4-6d3776c71860.jpg" />
      
  - Step_03. Estimate real **parameters** of new Gaussians, using the result of the soft_clustering
-   - > For example, the `new mean` for Cluster_A, given the result of step_02, comes from calculating the weighted AVG of all of these points. 
+   - > the `new mean` for cluster_A, given the result of step_02(transient memberships), comes from calculating the **weighted mean** of all of the points with the same transient memberships.
+     - the weighted mean does not only account for the parameters of each pt, but also account for how much it belongs.
+   - > the `new var` for cluster_A, given the result of step_02(transient memberships), comes from calculating the **weighter VAR** of all of the points with the same transient memberships.       
+<img src="https://user-images.githubusercontent.com/31917400/41906886-16dae142-7937-11e8-975d-e07f990de95f.jpg" />
 
+ - Step_04. Compare(overlay) the new result with the old Gaussian. We iterate these steps until it converges(no movement?).  
+   - > Evaluate the `log-likelihood` which sums for all clusters.
+     - the higher the value, the more sure we are that the mixer model fits out dataset.
+     - the purpose is to **maximize** this value by choosing the parameters(the mixing coefficient, mean, var) of each Gaussian again and again until the value converges, reaching a maximum. 
+<img src="https://user-images.githubusercontent.com/31917400/41907759-b96fe09a-7939-11e8-8cd6-957812adc8ce.jpg" />
 
 
 
