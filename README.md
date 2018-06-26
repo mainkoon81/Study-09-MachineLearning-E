@@ -170,11 +170,16 @@ http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf
 ## C. Cluster Validation
 <img src="https://user-images.githubusercontent.com/31917400/41922451-031eb4b4-795d-11e8-95b9-3c069d974b1a.jpg" />
 
-__1.External Indices:__
+__1.External Indices:__ (for K-means)
 <img src="https://user-images.githubusercontent.com/31917400/41922576-5570dfee-795d-11e8-8834-2fb0cda805b1.jpg" />
 
+ - To conduct this, we need the ground truth(answer-sheet or the labeled dataset)
  - ARI(Adjusted Rand_Index) [-1 to 1]: 
+   - ARI does not care what label we assign a cluster, as long as the point assignment matches that of the ground truth.
 <img src="https://user-images.githubusercontent.com/31917400/41938150-29f005e8-798a-11e8-8bac-85d9c0a0c0da.jpg" />
+
+__2. Internal Indices:__ (for Density-based Clustering_DBSCAN)
+
 
 
 
