@@ -172,7 +172,7 @@ http://www.ai.mit.edu/projects/vsam/Publications/stauffer_cvpr98_track.pdf
 __1.External Indices:__
 <img src="https://user-images.githubusercontent.com/31917400/41922576-5570dfee-795d-11e8-8834-2fb0cda805b1.jpg" />
 
- - Adjusted Rand_Index [-1 to 1]: 
+ - ARI(Adjusted Rand_Index) [-1 to 1]: 
 <img src="https://user-images.githubusercontent.com/31917400/41925442-773ad6b4-7964-11e8-9386-a443473a0ea9.jpg" />
 
 
