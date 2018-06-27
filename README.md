@@ -226,7 +226,16 @@ By the 'shape' of the cluster
 
 We can't possibly come up with coordinate system shifted, rotated from the original to obtain the **one dimensionality**. PCA specializes on **'shifts'** and **'rotation'** for the coordinate system.
 
+If our given data is of any shape whatsoever, PCA finds a **new coordinate system** obtained from the original by translation or rotation.  
+ - It moves the **center** of the coordinate system with the center of the dataset.
+ - It moves the X-axis into the principal axis of the variation where we see the **most variation** relative to all the data-pt.
+ - It moves the y-axis down the road into the orthogonal(less important directions of variation). 
 
+What defines the two principal directions(the two orthogonal vectors)? 
+ - Q.Find the center of the dataset?
+ - Q.Find the two principal axis of variation? (Eigenvectors)
+   - The measure of the orthogonality: Do the 'dot-product' of these two vectors, we should get 'zero'.  
+ - Q.Find the spread values (giving importance to our vectors) for the two axis? (Eigenvalues)
 
 
 
