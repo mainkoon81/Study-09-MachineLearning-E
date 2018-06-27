@@ -237,6 +237,7 @@ What defines the two principal directions(the two orthogonal vectors)?
    - The measure of the orthogonality: Do the 'dot-product' of these two vectors, we should get 'zero'.  
  - Q.Find the spread values (giving importance to our vectors) for the two axis? (Eigenvalues)
 
+## Compression while preserving all information!!!!
 
 
 
