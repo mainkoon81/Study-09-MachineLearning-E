@@ -220,9 +220,11 @@ By the 'shape' of the cluster
 
 
 ```
-
 ---
-## D. PCA
+## D. Principal Component Anaysis
+<img src="https://user-images.githubusercontent.com/31917400/41972463-e1dde6f0-7a09-11e8-8a0c-735beef82dd3.jpg" />
+
+We can't possibly come up with coordinate system shifted, rotated from the original to obtain the **one dimensionality**. PCA specializes on **'shifts'** and **'rotation'** for the coordinate system.
 
 
 
