@@ -214,7 +214,7 @@ scaler = MinMaxScaler()
 
 rescaled_X = scaler.fit_transform(X); rescaled_X
 ```
-[Note]: Which algorithms are affected by the feature scaling ??
+> [Note]: Which algorithms are affected by the feature scaling ??
  - SVM Classification =>(YES):
  - K-means Clustering =>(YES):
  - Linear Regression Classification =>(NO):
