@@ -2,6 +2,26 @@
 UnsupervisedLearning
 
 ---
+## 00. Feature Scaling in the pre-processing data stage
+ - Transform features to have a range [0,1]
+<img src="https://user-images.githubusercontent.com/31917400/41969522-972a0526-79ff-11e8-9064-6035360353d2.jpg" />
+
+```
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+
+X = np.array([ [115.0],[140.0],[175.0] ])
+scaler = MinMaxScaler()
+
+rescaled_X = scaler.fit_transform(X); rescaled_X
+```
+> [Note]: Which algorithms are affected by the feature scaling ??
+ - SVM Classification =>(YES): We trade off one dimension to the other when calculating the distance(the "diagonal" decision_surf maximizing distances)
+ - K-means Clustering =>(YES): Having a cluster center, and calculating the distances of it to all data pt..they are "diagonal".
+ - Linear Regression Classification =>(NO): Each feature always goes with its coefficient. What's going on with feature_A does not affect anything with the coefficient of feature_B..So they are separated.  
+ - DescisionTree Classification =>(NO): No need to use diagonal decision surf. There is no trade off. 
+
+---
 ## A. Basic Clustering
 <img src="https://user-images.githubusercontent.com/31917400/41802151-ac0d97dc-7676-11e8-8c9f-30623f45fbbe.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/41823116-0c410914-77f2-11e8-8d2f-52bbbffcec4e.jpg" />
@@ -200,25 +220,9 @@ By the 'shape' of the cluster
 
 
 ```
+
 ---
-## D. Feature Scaling in the pre-processing data stage
- - Transform features to have a range [0,1]
-<img src="https://user-images.githubusercontent.com/31917400/41969522-972a0526-79ff-11e8-9064-6035360353d2.jpg" />
-
-```
-import numpy as np
-from sklearn.preprocessing import MinMaxScaler
-
-X = np.array([ [115.0],[140.0],[175.0] ])
-scaler = MinMaxScaler()
-
-rescaled_X = scaler.fit_transform(X); rescaled_X
-```
-> [Note]: Which algorithms are affected by the feature scaling ??
- - SVM Classification =>(YES):
- - K-means Clustering =>(YES):
- - Linear Regression Classification =>(NO):
- - DescisionTree Classification =>(NO): 
+## D. PCA
 
 
 
