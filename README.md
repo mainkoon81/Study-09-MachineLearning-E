@@ -201,7 +201,25 @@ By the 'shape' of the cluster
 
 ```
 ---
-## D. Feature Scaling
+## D. Feature Scaling in the pre-processing data stage
+ - Transform features to have a range [0,1]
+<img src="https://user-images.githubusercontent.com/31917400/41969522-972a0526-79ff-11e8-9064-6035360353d2.jpg" />
+
+```
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+
+X = np.array([ [115.0],[140.0],[175.0] ])
+scaler = MinMaxScaler()
+
+rescaled_X = scaler.fit_transform(X); rescaled_X
+```
+[Note]: Which algorithms are affected by the feature scaling ??
+ - SVM Classification =>(YES):
+ - K-means Clustering =>(YES):
+ - Linear Regression Classification =>(NO):
+ - DescisionTree Classification =>(NO): 
+
 
 
 
