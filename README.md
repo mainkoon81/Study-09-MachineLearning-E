@@ -252,15 +252,18 @@ Let's say we have a large number of measurable features, but we know there are a
 <img src="https://user-images.githubusercontent.com/31917400/42037658-e1726178-7ae0-11e8-9f85-b00d34e1cf40.jpg" />
 
  - [Usage]
-   - 1. When we want to examine **latent features** driving the patterns in our complex data
-   - 2. Dimensionality Reduction
+   - When we want to examine **latent features** driving the patterns in our complex data
+   - Dimensionality Reduction
      - Visualizing high-dimensional data(projecting the two features down to the first PC-line and leave them as scatters, then use K-means) 
      - Reducing **noises** by discarding unimportant PC. 
      - Pre-processing before using any other algorithms by reducing the demensionality of inputs.   
 
-```
+Ex> facial recognition why?
+ - **Mega pixels:** pictures of human faces in general have high input dimensionality
+ - **Eyes, nose, mouth:** Human faces have general patterns that could be captured in smaller number of dimensions.
+ - In this example, the original dimensionality of the pic is: "1288 rows x 1850 features" plus "7 classes".  
+<img src="https://user-images.githubusercontent.com/31917400/42042814-dd600804-7aec-11e8-9cd7-518cd8022784.jpg" />
 
-```
 
 
 
