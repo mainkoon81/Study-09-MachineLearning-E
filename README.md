@@ -297,7 +297,7 @@ print("n_samples: %d" % n_samples)
 print("n_features: %d" % n_features)
 print( "n_classes: %d" % n_classes)
 ```
-<img src="https://user-images.githubusercontent.com/31917400/42042814-dd600804-7aec-11e8-9cd7-518cd8022784.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/42043299-04024a16-7aee-11e8-80b1-5a9b70efb817.jpg" />
 
 
 
