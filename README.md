@@ -249,7 +249,8 @@ Let's say we have a large number of measurable features, but we know there are a
    - the amount of information loss is equal to the distances b/w the component line(the new tranformed values) and a given pt.  
 <img src="https://user-images.githubusercontent.com/31917400/42027169-fb884a48-7ac0-11e8-935f-1ded1892b17e.jpg" />
 
-
+ - PCA can give an insight on which features drive the most impact..eventhough we know nothing about our dataset with crazy many features. 
+<img src="https://user-images.githubusercontent.com/31917400/42032945-1be1571e-7ad3-11e8-942d-3a7767e40b20.jpg" />
 
 
 
