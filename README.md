@@ -221,7 +221,8 @@ By the 'shape' of the cluster
 
 ```
 ---
-## D. Principal Component Anaysis
+## D. Dimensionality Reduction
+### 1. Principal Component Anaysis
 <img src="https://user-images.githubusercontent.com/31917400/41972463-e1dde6f0-7a09-11e8-8a0c-735beef82dd3.jpg" />
 
 We can't possibly come up with coordinate system shifted, rotated from the original to obtain the **one dimensionality**. PCA specializes on **'shifts'** and **'rotation'** for the coordinate system.
@@ -299,7 +300,7 @@ print( "n_classes: %d" % n_classes)
 ```
 <img src="https://user-images.githubusercontent.com/31917400/42043299-04024a16-7aee-11e8-80b1-5a9b70efb817.jpg" />
 
-
+### 2. RandomProjection & ICA
 
 
 
