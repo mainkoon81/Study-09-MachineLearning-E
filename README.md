@@ -243,8 +243,9 @@ Let's say we have a large number of measurable features, but we know there are a
  - What's the most suitable feature selection tool ? 
    - Select K-Best ?
    - Select Percentile ?
+<img src="https://user-images.githubusercontent.com/31917400/42025974-d913c8c8-7abd-11e8-81a7-6348aca9f137.jpg" />
    
-
+ - How to find the principal component ?
 
 
 
