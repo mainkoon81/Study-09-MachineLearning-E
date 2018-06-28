@@ -261,7 +261,42 @@ Let's say we have a large number of measurable features, but we know there are a
 Ex> facial recognition why?
  - **Mega pixels:** pictures of human faces in general have high input dimensionality
  - **Eyes, nose, mouth:** Human faces have general patterns that could be captured in smaller number of dimensions.
- - In this example, the original dimensionality of the pic is: "1288 rows x 1850 features" plus "7 classes".  
+ - In this example, the original dimensionality of the pic is: "1288 rows x 1850 features" plus "7 classes".
+```
+from time import time
+import logging
+import pylab as pl
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import fetch_lfw_people
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.decomposition import RandomizedPCA
+from sklearn.decomposition import PCA
+from sklearn.svm import SVC
+
+# Download the data, if not already on disk and load it as numpy arrays
+lfw_people = fetch_lfw_people('data', min_faces_per_person=70, resize=0.4)
+
+# introspect the images arrays to find the shapes (for plotting)
+n_samples, h, w = lfw_people.images.shape
+np.random.seed(42)
+
+# for machine learning we use the data directly (as relative pixel
+# position info is ignored by this model)
+X = lfw_people.data
+n_features = X.shape[1]
+
+# the label to predict is the id of the person
+y = lfw_people.target
+target_names = lfw_people.target_names
+n_classes = target_names.shape[0]
+
+print("n_samples: %d" % n_samples)
+print("n_features: %d" % n_features)
+print( "n_classes: %d" % n_classes)
+```
 <img src="https://user-images.githubusercontent.com/31917400/42042814-dd600804-7aec-11e8-9cd7-518cd8022784.jpg" />
 
 
