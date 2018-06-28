@@ -245,8 +245,9 @@ Let's say we have a large number of measurable features, but we know there are a
    - Select Percentile ?
 <img src="https://user-images.githubusercontent.com/31917400/42025974-d913c8c8-7abd-11e8-81a7-6348aca9f137.jpg" />
    
- - How to find the principal component ?
-
+ - How to find the principal component ? How to find the direction of maximal variance ? 
+   - the amount of information loss is equal to the distances b/w the component line(the new tranformed values) and a given pt.  
+<img src="https://user-images.githubusercontent.com/31917400/42027169-fb884a48-7ac0-11e8-935f-1ded1892b17e.jpg" />
 
 
 
