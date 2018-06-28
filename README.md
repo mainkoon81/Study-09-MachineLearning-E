@@ -232,13 +232,18 @@ If our given data is of any shape whatsoever, PCA finds a **new coordinate syste
  - It moves the y-axis down the road into the orthogonal(less important directions of variation). 
 
 What defines the two principal directions(the two orthogonal vectors)? 
- - Q.Find the center of the dataset?
- - Q.Find the two principal axis of variation? (Eigenvectors)
+ - 1.Find the center of the dataset
+ - 2.Find the two principal axis of variation (Eigenvectors)
    - The measure of the orthogonality: Do the 'dot-product' of these two vectors, we should get 'zero'.  
- - Q.Find the spread values (giving importance to our vectors) for the two axis? (Eigenvalues)
+ - 3.Find the spread values (giving importance to our vectors) for the two axis? (Eigenvalues)
+<img src="https://user-images.githubusercontent.com/31917400/42023655-4e221f58-7ab8-11e8-9332-229d9417d1d3.jpg" />
 
 ## Compression while preserving all information!!!!
-
+Let's say we have a large number of measurable features, but we know there are a small number of underlying **latent features** that contain most of information. What's the best way to condense those features? 
+ - What's the most suitable feature selection tool ? 
+   - Select K-Best ?
+   - Select Percentile ?
+   
 
 
 
