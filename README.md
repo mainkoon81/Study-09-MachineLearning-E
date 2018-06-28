@@ -254,10 +254,13 @@ Let's say we have a large number of measurable features, but we know there are a
  - [Usage]
    - 1. When we want to examine **latent features** driving the patterns in our complex data
    - 2. Dimensionality Reduction
-     - Visualizing high-dimensional data(projecting the two features down to the first PC-line and create scatters, then use K-means) 
+     - Visualizing high-dimensional data(projecting the two features down to the first PC-line and leave them as scatters, then use K-means) 
      - Reducing **noises** by discarding unimportant PC. 
      - Pre-processing before using any other algorithms by reducing the demensionality of inputs.   
 
+```
+
+```
 
 
 
