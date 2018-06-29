@@ -302,13 +302,14 @@ print( "n_classes: %d" % n_classes)
 
 ### 2. RandomProjection & ICA
  - Computationally more efficient than PCA.
-   - handle even more features than PCA
+   - handle even more features than PCA (with a decrease in quality of projection, however.)
  - Premise
    - Simply reduce the size of dimensions in our dataset by **multiplying it by a random matrix**.
- - Where does the 'k'(reduced dimensions) come from?
+ - Where does the **'k'**(reduced dimensions) come from?
    - This algorithm extra cares about the distances b/w points. 
    - We have a certain level of guarantee that the distances will be a bit distorted, but can be preserved! 
      - the distance b/w two pt in the projection squared would be squeezed by.....  
+   - The algorithm work either by setting a number of components(**'k'**) or by specifying a value for 'epsilon' and calculate a conservative value for **'k'**.
 <img src="https://user-images.githubusercontent.com/31917400/42087854-65fb21ce-7b8f-11e8-8acd-9995711cb404.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/42087862-6873453a-7b8f-11e8-82f5-f04b4c853db7.jpg" />
 
