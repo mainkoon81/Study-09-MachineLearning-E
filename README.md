@@ -331,8 +331,13 @@ While PCA works to maximize 'var', ICA tries to isolate the independent sources 
    - the Central_Limit_Theorem says the distribution of a sum of independent variables(or sample means) tends towards the Gaussian.  
 <img src="https://user-images.githubusercontent.com/31917400/42100267-a86bbdfc-7bb7-11e8-8d44-c8573b73e74e.jpg" />
 
+```
+from sklearn.decomposition import FastICA
+X = list(zip(signal_1, signal_2, signal_3))
+ica = FastICA(n_components=3)
 
-
+components = ica.fit_transform(X)  ## here, these objects contain the independent components retrieved via ICA 
+```
 
 
 
