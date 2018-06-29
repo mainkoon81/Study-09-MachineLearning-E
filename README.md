@@ -320,10 +320,16 @@ rp = random_projection.SparseRandomProjection(n_components='auto', eps=0.1)
 new_X = rp.fit_transform(X)
 ```
 ### 3. Independent Component Analysis
-While PCA works to maximize 'var', ICA assumes that the features are mixtures of independent sources and tries to isolate these independent sources that are mixed in the dataset.
- - EX> Cocktail Party problem: 
+While PCA works to maximize 'var', ICA tries to isolate the independent sources that are mixed in the dataset.
+ - EX> blind source separation: Restoring the original signals..
 <img src="https://user-images.githubusercontent.com/31917400/42096573-991bf916-7bad-11e8-96f3-cf86496aacf1.jpg" />
 
+ - To produce the original signal `S`, ICA estimate the best `W` that we can multiply by `X`.. 
+ - ICA assumes
+   - the features are mixtures of independent sources
+   - the components must have **non-Gaussian** distributions.
+   - the Central_Limit_Theorem says the distribution of a sum of independent variables(or sample means) tends towards the Gaussian.  
+<img src="https://user-images.githubusercontent.com/31917400/42100267-a86bbdfc-7bb7-11e8-8d44-c8573b73e74e.jpg" />
 
 
 
