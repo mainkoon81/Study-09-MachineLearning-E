@@ -300,7 +300,7 @@ print( "n_classes: %d" % n_classes)
 ```
 <img src="https://user-images.githubusercontent.com/31917400/42043299-04024a16-7aee-11e8-80b1-5a9b70efb817.jpg" />
 
-### 2. RandomProjection & ICA
+### 2. RandomProjection
  - Computationally more efficient than PCA.
    - handle even more features than PCA (with a decrease in quality of projection, however.)
  - Premise
@@ -313,12 +313,13 @@ print( "n_classes: %d" % n_classes)
 <img src="https://user-images.githubusercontent.com/31917400/42087854-65fb21ce-7b8f-11e8-8acd-9995711cb404.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/42087862-6873453a-7b8f-11e8-82f5-f04b4c853db7.jpg" />
 
+```
+from sklearn import random_projection
 
-
-
-
-
-
+rp = random_projection.SparseRandomProjection(n_components='auto', eps=0.1) 
+new_X = rp.fit_transform(X)
+```
+### 3. Independent Component Analysis
 
 
 
