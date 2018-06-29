@@ -309,18 +309,20 @@ print( "n_classes: %d" % n_classes)
    - This algorithm extra cares about the distances b/w points. 
    - We have a certain level of guarantee that the distances will be a bit distorted, but can be preserved! 
      - the distance b/w two pt in the projection squared would be squeezed by.....  
-   - The algorithm work either by setting a number of components(**'k'**) or by specifying a value for 'epsilon' and calculate a conservative value for **'k'**.
+   - The algorithm work either by setting a number of components we want(**'k'**) or by specifying a value for 'epsilon' and calculate a conservative value for **'k'**, and gives a new dataset.
 <img src="https://user-images.githubusercontent.com/31917400/42087854-65fb21ce-7b8f-11e8-8acd-9995711cb404.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/42087862-6873453a-7b8f-11e8-82f5-f04b4c853db7.jpg" />
 
 ```
 from sklearn import random_projection
-
 rp = random_projection.SparseRandomProjection(n_components='auto', eps=0.1) 
+
 new_X = rp.fit_transform(X)
 ```
 ### 3. Independent Component Analysis
-
+While PCA works to maximize 'var', ICA assumes that the features are mixtures of independent sources and tries to isolate these independent sources that are mixed in the dataset.
+ - EX> Cocktail Party problem: 
+<img src="https://user-images.githubusercontent.com/31917400/42096573-991bf916-7bad-11e8-96f3-cf86496aacf1.jpg" />
 
 
 
