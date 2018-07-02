@@ -42,11 +42,18 @@ rescaled_X = scaler.fit_transform(X); rescaled_X
 
 ![02](http://www.sciweavers.org/upload/Tex2Img_1529755147/render.png)
 
-> Limitation: 
+> Advantages:
+ - it is simple, easy to implement and easy to interpret the results. 
+ - it practically work well even some assumptions are broken.
+> Disadvantages: 
  - **Local Minima**: It's a local hill climbing algorithm. It can give a sub-optimal solution. The output for any fixed training set can be inconsistent...Damn. The output would be very dependent on where we put our **initial cluster centers**. The more cluster centers we have, the more bad local minima we can get, so run the algorithm multiple times.
 <img src="https://user-images.githubusercontent.com/31917400/41810278-e6b5e196-76f3-11e8-9fa0-1d0cb04a6975.jpg" />
 
- - **Hyper-spherical nature**: it only relies on distance to centroid as a definition of a cluster, thus it cannot carve out descent clusters when their shapes are not spherical.
+ - **Hyper-spherical nature**: 
+   - it only relies on distance to centroid as a definition of a cluster, thus it works poorly with clusters with different densities and cannot carve out descent clusters when their shapes are not spherical.
+   - it assumes the joint distribution of features within each cluster is spherical, features within a cluster have equal variance, and also features are independent of each other.
+   - it assumes balanced cluster size within the dataset, thus often produces clusters with relatively uniform size even if the input data have different cluster size. 
+   - it is sensitive to outliers
 ```
 
 
