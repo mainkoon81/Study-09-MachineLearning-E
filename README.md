@@ -1,6 +1,11 @@
 # Study-09-MachineLearning-E
 UnsupervisedLearning
 
+- A. Basic Clustering
+- B. Model-Based Clustering
+- C. Cluster Validation
+- D. Dimensionality Reduction
+
 ---
 ## 00. Feature Scaling in the pre-processing data stage
  - Transform features to have a range [0,1]
@@ -345,63 +350,6 @@ ica = FastICA(n_components=3)
 
 components = ica.fit_transform(X)  ## here, these objects contain the independent components retrieved via ICA 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
