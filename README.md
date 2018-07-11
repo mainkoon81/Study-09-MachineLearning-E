@@ -253,7 +253,7 @@ If our given data is of any shape whatsoever, PCA finds a **new coordinate syste
 
 ## Compression while preserving all information!!!! Get rid of multicollinearity!!!!
 Let's say we have a large number of measurable features, but we know there are a small number of underlying **latent features** that contain most of information. What's the best way to condense those features? 
-# Linear-Combinations using those features!
+# The new variable is a linear-Combinations using those features! But the game changer is the Cov-matrix!!
 <img src="https://user-images.githubusercontent.com/31917400/42027356-6bdeba52-7ac1-11e8-9c40-ff5175546dbf.jpg" />
 
  - How to find the principal component or the direction that capturing the maximal variance (the corresponding Eigenvector of Cov_matrix) ? 
