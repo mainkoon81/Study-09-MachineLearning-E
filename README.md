@@ -244,7 +244,7 @@ If our given data is of any shape whatsoever, PCA finds a **new coordinate syste
  - It moves the X-axis into the principal axis of the variation where we see the **most variation** relative to all the data-pt.
  - It moves the y-axis down the road into the orthogonal(less important directions of variation). 
 
-What defines the two principal directions(the two orthogonal vectors)? 
+> What defines the two principal directions(the two orthogonal vectors)? to kill dimensionality, multicollinearity...
  - 1.Find the center of the dataset
  - 2.Find the two principal axis of variation (Eigenvectors)
    - The measure of the orthogonality: Do the 'dot-product' of these two vectors, we should get 'zero'.  
