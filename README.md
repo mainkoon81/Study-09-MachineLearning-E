@@ -257,7 +257,7 @@ Let's say we have a large number of measurable features, but we know there are a
 <img src="https://user-images.githubusercontent.com/31917400/42027356-6bdeba52-7ac1-11e8-9c40-ff5175546dbf.jpg" />
 
  - How to find the principal component or the direction that capturing the maximal variance (the corresponding Eigenvector of Cov_matrix) ? 
-   - the amount of **information loss** is equal to the distances b/w the component line(the new tranformed values) and a given pt ...which is called the pxp **Cov-Matrix ?**.  
+   - the amount of **information loss** is equal to the distances b/w the component line(the new tranformed values) and a given pt, so find the component line that minimizes the information loss. This component line is the Eigenvector of pxp **Cov-Matrix ?**.  
 <img src="https://user-images.githubusercontent.com/31917400/42027169-fb884a48-7ac0-11e8-935f-1ded1892b17e.jpg" />
 
  - How to give an insight on **which features** drive the most impact(capturing the major pattern - the largest Eigenvalue of Cov-matrix) ?
