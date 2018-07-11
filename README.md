@@ -262,9 +262,10 @@ Let's say we have a large number of measurable features, but we know there are a
 
  - How to give an insight on **which features** drive the most impact(capturing the major pattern - the largest Eigenvalue of Cov-matrix) ?
 <img src="https://user-images.githubusercontent.com/31917400/42032945-1be1571e-7ad3-11e8-942d-3a7767e40b20.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/42599845-724493b6-8558-11e8-9455-e76d4a91715a.jpg" />
+
 <img src="https://user-images.githubusercontent.com/31917400/42033668-7f2ca6b4-7ad5-11e8-8eea-b410e21e512b.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/42037658-e1726178-7ae0-11e8-9f85-b00d34e1cf40.jpg" />
-<img src="https://user-images.githubusercontent.com/31917400/42599845-724493b6-8558-11e8-9455-e76d4a91715a.jpg" />
 
  - [Usage]
    - When we want to examine **latent features** driving the patterns in our complex data
