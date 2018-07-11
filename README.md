@@ -253,8 +253,9 @@ If our given data is of any shape whatsoever, PCA finds a **new coordinate syste
 
 ## Compression while preserving all information!!!!
 Let's say we have a large number of measurable features, but we know there are a small number of underlying **latent features** that contain most of information. What's the best way to condense those features? 
+# Linear-Combinations using those features!
 <img src="https://user-images.githubusercontent.com/31917400/42027356-6bdeba52-7ac1-11e8-9c40-ff5175546dbf.jpg" />
-   
+
  - How to find the principal component ? How to find the direction of maximal variance ? 
    - the amount of information loss is equal to the distances b/w the component line(the new tranformed values) and a given pt.  
 <img src="https://user-images.githubusercontent.com/31917400/42027169-fb884a48-7ac0-11e8-935f-1ded1892b17e.jpg" />
