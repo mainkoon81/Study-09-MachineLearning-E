@@ -245,25 +245,35 @@ If our given data is of any shape whatsoever, PCA finds a **new coordinate syste
  - It moves the y-axis down the road into the orthogonal(less important directions of variation). 
 
 > **What defines the two principal directions(the two orthogonal vectors)?** to kill dimensionality, multicollinearity...
-> - 1.Find the center of the dataset
+> - 1.Find the center of the dataset (mean??)
 > - 2.Find the two principal axis of variation (Eigenvectors)
 >   - The measure of the orthogonality: Do the 'dot-product' of these two vectors, we should get 'zero'.  
 > - 3.Find the spread values (giving importance to our vectors) for the two axis? (Eigenvalues)
 <img src="https://user-images.githubusercontent.com/31917400/42023655-4e221f58-7ab8-11e8-9332-229d9417d1d3.jpg" />
 
-## Compression while preserving all information!!!!
+## Compression while preserving all information!!!! Get rid of multicollinearity!!!!
 Let's say we have a large number of measurable features, but we know there are a small number of underlying **latent features** that contain most of information. What's the best way to condense those features? 
 # Linear-Combinations using those features!
 <img src="https://user-images.githubusercontent.com/31917400/42027356-6bdeba52-7ac1-11e8-9c40-ff5175546dbf.jpg" />
 
- - How to find the principal component ? How to find the direction of maximal variance ? 
-   - the amount of information loss is equal to the distances b/w the component line(the new tranformed values) and a given pt.  
+ - How to find the principal component or the direction that capturing the maximal variance (Eigenvector of Cov_matrix) ? 
+   - the amount of **information loss** is equal to the distances b/w the component line(the new tranformed values) and a given pt ...which is called the pxp **Cov-Matrix**.  
 <img src="https://user-images.githubusercontent.com/31917400/42027169-fb884a48-7ac0-11e8-935f-1ded1892b17e.jpg" />
 
- - PCA can give an insight on **which features** drive the most impact(capture the major pattern)..eventhough we know nothing about our dataset with crazy many features. 
+ - How to give an insight on **which features** drive the most impact(capturing the major pattern - Eigenvalue) ?
 <img src="https://user-images.githubusercontent.com/31917400/42032945-1be1571e-7ad3-11e8-942d-3a7767e40b20.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/42033668-7f2ca6b4-7ad5-11e8-8eea-b410e21e512b.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/42037658-e1726178-7ae0-11e8-9f85-b00d34e1cf40.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/42599845-724493b6-8558-11e8-9455-e76d4a91715a.jpg" />
+
+
+
+
+
+
+
+
+
 
  - [Usage]
    - When we want to examine **latent features** driving the patterns in our complex data
