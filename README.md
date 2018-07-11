@@ -256,24 +256,15 @@ Let's say we have a large number of measurable features, but we know there are a
 # Linear-Combinations using those features!
 <img src="https://user-images.githubusercontent.com/31917400/42027356-6bdeba52-7ac1-11e8-9c40-ff5175546dbf.jpg" />
 
- - How to find the principal component or the direction that capturing the maximal variance (Eigenvector of Cov_matrix) ? 
-   - the amount of **information loss** is equal to the distances b/w the component line(the new tranformed values) and a given pt ...which is called the pxp **Cov-Matrix**.  
+ - How to find the principal component or the direction that capturing the maximal variance (the corresponding Eigenvector of Cov_matrix) ? 
+   - the amount of **information loss** is equal to the distances b/w the component line(the new tranformed values) and a given pt ...which is called the pxp **Cov-Matrix ?**.  
 <img src="https://user-images.githubusercontent.com/31917400/42027169-fb884a48-7ac0-11e8-935f-1ded1892b17e.jpg" />
 
- - How to give an insight on **which features** drive the most impact(capturing the major pattern - Eigenvalue) ?
+ - How to give an insight on **which features** drive the most impact(capturing the major pattern - the largest Eigenvalue of Cov-matrix) ?
 <img src="https://user-images.githubusercontent.com/31917400/42032945-1be1571e-7ad3-11e8-942d-3a7767e40b20.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/42033668-7f2ca6b4-7ad5-11e8-8eea-b410e21e512b.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/42037658-e1726178-7ae0-11e8-9f85-b00d34e1cf40.jpg" />
 <img src="https://user-images.githubusercontent.com/31917400/42599845-724493b6-8558-11e8-9455-e76d4a91715a.jpg" />
-
-
-
-
-
-
-
-
-
 
  - [Usage]
    - When we want to examine **latent features** driving the patterns in our complex data
