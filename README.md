@@ -315,6 +315,10 @@ print( "n_classes: %d" % n_classes)
 ```
 <img src="https://user-images.githubusercontent.com/31917400/42043299-04024a16-7aee-11e8-80b1-5a9b70efb817.jpg" />
 
+### Eigenvalue and Eigenvector
+A matrix is a linear transformation tool and focus on **mapping of a vector**. It can transform the **magnitude** and the **direction** of a vector into **lower dimension**! 
+<img src="https://user-images.githubusercontent.com/31917400/43229747-c51a68ee-905d-11e8-89cb-1ac7657e61ed.jpg" />
+
 ### 2. RandomProjection
  - Computationally more efficient than PCA.
    - handle even more features than PCA (with a decrease in quality of projection, however.)
