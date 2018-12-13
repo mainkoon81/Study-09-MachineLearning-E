@@ -7,9 +7,9 @@ UnsupervisedLearning
 - D. Dimensionality Reduction
 
 ---
-## 00. Feature Scaling in the pre-processing data stage
+## 00. Min-Max_Scaler: Feature Scaling in the pre-processing data stage
  - Unbalanced features: height / weight..the unit differ you dummy! How this combination of features can describe someone ? 
- - Transform features to have a range [0,1]
+ - Transform features to have a range [0,1], but what if it has outliers?? such as ridiculous max or min ??
 <img src="https://user-images.githubusercontent.com/31917400/41969522-972a0526-79ff-11e8-9064-6035360353d2.jpg" />
 
 ```
