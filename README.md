@@ -13,6 +13,15 @@ UnsupervisedLearning
 <img src="https://user-images.githubusercontent.com/31917400/41969522-972a0526-79ff-11e8-9064-6035360353d2.jpg" />
 
 ```
+def featureScaling(array):
+    answer = []
+    for i in array:
+        value = float(i - min(array))/float(max(array)-min(array))
+        answer.append(value)
+    return answer
+data = [115, 140, 175]
+print featureScaling(data)
+#-----------------------------------------------------------------------------
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
