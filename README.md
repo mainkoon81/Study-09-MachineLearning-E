@@ -18,21 +18,23 @@ def featureScaling(array):
     for i in array:
         value = float(i - min(array))/float(max(array)-min(array))
         answer.append(value)
-    return answer
+    return(answer)
 data = [115, 140, 175]
 print featureScaling(data)
-#-----------------------------------------------------------------------------
-import numpy as np
+```
+**`ScikitLearn` loves `numpy input`!!!!!**
+```
+import numpy as np 
 from sklearn.preprocessing import MinMaxScaler
 
-X = np.array([ [115.0],[140.0],[175.0] ])
-scaler = MinMaxScaler()
+X = np.array([ [115.0],[140.0],[175.0] ]) # need to be float!! "[]" means.."row"
 
-rescaled_X = scaler.fit_transform(X); rescaled_X
+scaler = MinMaxScaler()
+rescaled_X = scaler.fit_transform(X)
 ```
-> [Note]: Which algorithms are affected by the feature scaling ??
- - SVM Classification =>(YES): We trade off one dimension to the other when calculating the distance(the "diagonal" decision_surf maximizing distances)
- - K-means Clustering =>(YES): Having a cluster center, and calculating the distances of it to all data pt..they are "diagonal".
+> [Note]: Which algorithms are affected by the **feature scaling** ??
+ - SVM Classification =>(YES): We trade off one dimension to the other when calculating the `distances`(the **"diagonal"** decision_surf maximizing distances)
+ - K-means Clustering =>(YES): Having a cluster center, and calculating the `distances` of it to all data pt..they are **"diagonal"**.
  - Linear Regression Classification =>(NO): Each feature always goes with its coefficient. What's going on with feature_A does not affect anything with the coefficient of feature_B..So they are separated.  
  - DescisionTree Classification =>(NO): No need to use diagonal decision surf. There is no trade off. 
 
