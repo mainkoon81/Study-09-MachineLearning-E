@@ -1,10 +1,13 @@
 # Study-09-MachineLearning-E
 UnsupervisedLearning
 
-- A. Basic Clustering
-- B. Model-Based Clustering
-- C. Cluster Validation
-- D. Dimensionality Reduction
+- **A. Basic Clustering**
+  - K-mean, Hierarchical, DBSCAN
+- **B. Model-Based Clustering**
+  - Gaussian Mixture
+- **C. Cluster Validation**
+- **D. Dimensionality Reduction**
+  - PCA, ICA
 
 ---
 ## 00. Min-Max_Scaler: Feature Scaling in the pre-processing data stage
