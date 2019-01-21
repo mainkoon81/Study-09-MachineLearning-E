@@ -200,7 +200,7 @@ plt.show()
    - > Evaluate the `log-likelihood` which sums for all clusters.
      - the higher the value, the more sure we are that the mixer model fits out dataset.
      - the purpose is to **maximize** this value by choosing the parameters(the mixing coefficient, mean, var) of each Gaussian again and again until the value converges, reaching a maximum. 
-     - What's the mixing coefficient??????
+     - What's the mixing coefficient? = mixing proportions.. they affect the **height** of the distribution.. 
 <img src="https://user-images.githubusercontent.com/31917400/41907759-b96fe09a-7939-11e8-8cd6-957812adc8ce.jpg" />
 
 ```
