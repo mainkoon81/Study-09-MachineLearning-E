@@ -204,9 +204,9 @@ plt.show()
 <img src="https://user-images.githubusercontent.com/31917400/41823873-f9733a66-77fe-11e8-843f-0e1375f6092c.jpg" />
 
 ```
-DBSCAN(D, epsilon, min_points):
+DBSCAN(df, epsilon, min_points):
       C = 0
-      for each unvisited point P in dataset
+      for each unvisited point P in df
             mark P as visited
             sphere_points = regionQuery(P, epsilon)
             if sizeof(sphere_points) < min_points
