@@ -77,9 +77,54 @@ rescaled_X = scaler.fit_transform(X)
    - it assumes balanced cluster size within the dataset, thus often produces clusters with relatively uniform size even if the input data have different cluster size. 
    - it is sensitive to outliers
 ```
+def kmeans(dataSet, k):
+	
+    # Initialize centroids randomly
+    numFeatures = dataSet.getNumFeatures()
+    centroids = getRandomCentroids(numFeatures, k)
+    
+    # Initialize book keeping vars.
+    iterations = 0
+    oldCentroids = None
+    
+    # Run the main k-means algorithm
+    while not shouldStop(oldCentroids, centroids, iterations):
+        # Save old centroids for convergence test. Book keeping.
+        oldCentroids = centroids
+        iterations += 1
+        
+        # Assign labels to each datapoint based on centroids
+        labels = getLabels(dataSet, centroids)
+        
+        # Assign centroids based on datapoint labels
+        centroids = getCentroids(dataSet, labels, k)
+        
+    # We can get the labels too by calling getLabels(dataSet, centroids)
+    return centroids
+    
+# Function: Should Stop
+# -------------
+# Returns True or False if k-means is done. K-means terminates either
+# because it has run a maximum number of iterations OR the centroids
+# stop changing.
+def shouldStop(oldCentroids, centroids, iterations):
+    if iterations > MAX_ITERATIONS: return True
+    return oldCentroids == centroids
 
-
-
+# Function: Get Labels
+# -------------
+# Returns a label for each piece of data in the dataset. 
+def getLabels(dataSet, centroids):
+    # For each element in the dataset, chose the closest centroid. 
+    # Make that centroid the element's label.
+    
+# Function: Get Centroids
+# -------------
+# Returns k random centroids, each of dimension n.
+def getCentroids(dataSet, labels, k):
+    # Each centroid is the geometric mean of the points that
+    # have that centroid's label. Important: If a centroid is empty (no points have
+    # that centroid's label) you should randomly re-initialize it.    
 ```
 ### 2. Hierarchical & Density-Based Clustering
  - In SKLEARN, they are parts of `agglomerative clustering` component.  
@@ -159,8 +204,30 @@ plt.show()
 <img src="https://user-images.githubusercontent.com/31917400/41823873-f9733a66-77fe-11e8-843f-0e1375f6092c.jpg" />
 
 ```
+DBSCAN(D, epsilon, min_points):
+      C = 0
+      for each unvisited point P in dataset
+            mark P as visited
+            sphere_points = regionQuery(P, epsilon)
+            if sizeof(sphere_points) < min_points
+                  ignore P
+            else
+                  C = next cluster
+                  expandCluster(P, sphere_points, C, epsilon, min_points)
 
+expandCluster(P, sphere_points, C, epsilon, min_points):
+      add P to cluster C
+      for each point P’ in sphere_points
+            if P’ is not visited
+                  mark P’ as visited
+                  sphere_points’ = regionQuery(P’, epsilon)
+                  if sizeof(sphere_points’) >= min_points
+                        sphere_points = sphere_points joined with sphere_points’
+                  if P’ is not yet member of any cluster
+                        add P’ to cluster C
 
+regionQuery(P, epsilon):
+      return all points within the n-dimensional sphere centered at P with radius epsilon (including P)
 
 ```
 <img src="https://user-images.githubusercontent.com/31917400/41823968-5ac06194-7800-11e8-8b24-119cfed4d27f.jpg" />
