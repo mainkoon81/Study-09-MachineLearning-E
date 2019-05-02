@@ -577,9 +577,12 @@ components = ica.fit_transform(X)  ## here, these objects contain the independen
    - The **whitening process** is simply a `linear change of coordinate` of the mixed data. Once the ICA solution is found in this “whitened” coordinate frame, we can easily reproject the ICA solution back into the original coordinate frame.
  <img src="https://user-images.githubusercontent.com/31917400/57101521-5473dc80-6d19-11e9-9a6b-eca58accaef7.jpg" />
 
+We can imagine that ICA rotates the **whitened matrix** back to the original (A,B) space (first scatter plot above). It performs the rotation by **minimizing the Gaussianity of the data** projected on both axes (fixed point ICA). For instance, in the example above, the projection on both axis is quite Gaussian (i.e., it looks like a bell shape curve). By contrast, the projection in the original A, B space far from gaussian. 
+ - By rotating the axis and minimizing Gaussianity of the projection in the first scatter plot, ICA is able to recover the original sources which are statistically independent (this property comes from the central limit theorem which states that any linear mixture of 2 independent random variables is more Gaussian than the original variables). 
+   - the function kurtosis gives an indication of the gaussianity of a distribution (but the fixed-point ICA algorithm uses a slightly different measure called negentropy). 
+<img src="https://user-images.githubusercontent.com/31917400/57102033-6a35d180-6d1a-11e9-9ec5-ad80486ff90b.jpg" />
 
-
-
+We dealt with only 2 dimensions. However ICA can deal with an arbitrary high number of dimensions. Let’s consider 128 EEG electrodes for instance. The signal recorded in all electrode at each time point then constitutes a data point in a 128 dimension space. After whitening the data, ICA will “rotate the 128 axis” in order to minimize the Gaussianity of the projection on all axis (note that unlike PCA the axis do not have to remain orthogonal). What we call ICA components is the matrix that allows projecting the data in the initial space to one of the axis found by ICA. The weight matrix is the full transformation from the original space. 
 
 
 
