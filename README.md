@@ -567,5 +567,42 @@ ica = FastICA(n_components=3)
 components = ica.fit_transform(X)  ## here, these objects contain the independent components retrieved via ICA 
 ```
 
+[Note]
+ - 1.Let’s mix two random sources A and B. At each time, in the following plot(1), the value of A is the abscissa(x-axis) of the data point and the value of B is their ordinates(Y-axis).
+ - 2.Let take two linear mixtures of A and B and plot(2) these two new variables.
+ - 3.Then if we whiten the two linear mixtures, we get the plot(3)
+ <img src="https://user-images.githubusercontent.com/31917400/57101521-5473dc80-6d19-11e9-9a6b-eca58accaef7.jpg" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
