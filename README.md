@@ -574,7 +574,8 @@ components = ica.fit_transform(X)  ## here, these objects contain the independen
    - the variance on both axis is now equal 
    - the correlation of the projection of the data on both axis is 0 (meaning that the covariance matrix is diagonal and that all the diagonal elements are equal). 
    - Then applying ICA only mean to “rotate” this representation back to the original A and B axis space.
-   - The **whitening process** is simply a `linear change of coordinate` of the mixed data. Once the ICA solution is found in this “whitened” coordinate frame, we can easily reproject the ICA solution back into the original coordinate frame.
+   - The **whitening process** is simply a `linear change of coordinate` of the mixed data. Once the ICA solution is found in this “whitened” coordinate frame, we can easily reproject the ICA solution back into the original coordinate frame. 
+   - **whitening** is basically a de-correlation transform that converts your matrix into an identity matrix
  <img src="https://user-images.githubusercontent.com/31917400/57101521-5473dc80-6d19-11e9-9a6b-eca58accaef7.jpg" />
 
 We can imagine that ICA rotates the **whitened matrix** back to the original (A,B) space (first scatter plot above). It performs the rotation by **minimizing the Gaussianity of the data** projected on both axes (fixed point ICA). For instance, in the example above, the projection on both axis is quite Gaussian (i.e., it looks like a bell shape curve). By contrast, the projection in the original A, B space far from gaussian. 
