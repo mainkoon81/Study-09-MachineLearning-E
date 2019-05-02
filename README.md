@@ -571,7 +571,12 @@ components = ica.fit_transform(X)  ## here, these objects contain the independen
  - 1.Let’s mix two random sources A and B. At each time, in the following plot(1), the value of A is the abscissa(x-axis) of the data point and the value of B is their ordinates(Y-axis).
  - 2.Let take two linear mixtures of A and B and plot(2) these two new variables.
  - 3.Then if we whiten the two linear mixtures, we get the plot(3)
+   - the variance on both axis is now equal 
+   - the correlation of the projection of the data on both axis is 0 (meaning that the covariance matrix is diagonal and that all the diagonal elements are equal). 
+   - Then applying ICA only mean to “rotate” this representation back to the original A and B axis space.
+   - The **whitening process** is simply a `linear change of coordinate` of the mixed data. Once the ICA solution is found in this “whitened” coordinate frame, we can easily reproject the ICA solution back into the original coordinate frame.
  <img src="https://user-images.githubusercontent.com/31917400/57101521-5473dc80-6d19-11e9-9a6b-eca58accaef7.jpg" />
+
 
 
 
