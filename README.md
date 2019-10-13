@@ -54,12 +54,12 @@ rescaled_X = scaler.fit_transform(X)
    - Step_03: Updating
      - Holding `Z_ik` fixed, elect 'new MU_k' for each cluster that **minimize SS**.
    - Step_04: Iterate until they converge (no movement of points b/w clusters)
-> **SS** of each data pt..(assign the membership `Z_ik`(0/1) that minimize the SS)
+> **SS** of each data pt..(**find the membership** `Z_ik`(0/1) that minimize the SS)
  - i: each datapoint
  - k: each cluster
  <img src="https://user-images.githubusercontent.com/31917400/66716288-d20d3f80-edc3-11e9-9457-b6ca283df3ed.JPG" />
 
-> **SS** for each cluster..(find the center `MU_k` that minimize the SS)
+> **SS** for each cluster..(**find the center** `MU_k` that minimize the SS)
  - i: each datapoint
  - k: each cluster
  <img src="https://user-images.githubusercontent.com/31917400/49332513-0f9b1c80-f5a6-11e8-8e9f-025b18092aee.JPG" />
