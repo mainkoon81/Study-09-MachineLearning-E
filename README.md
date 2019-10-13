@@ -57,7 +57,7 @@ rescaled_X = scaler.fit_transform(X)
 > **SS** of each data pt..(assign the membership `Z_ik`(0/1) that minimize the SS)
  - i: each datapoint
  - k: each cluster
- <img src="https://user-images.githubusercontent.com/31917400/49332511-0d38c280-f5a6-11e8-9eb2-8b10aad58d48.JPG" />
+ <img src="https://user-images.githubusercontent.com/31917400/66716288-d20d3f80-edc3-11e9-9457-b6ca283df3ed.JPG" />
 
 > **SS** for each cluster..(find the center `MU_k` that minimize the SS)
  - i: each datapoint
